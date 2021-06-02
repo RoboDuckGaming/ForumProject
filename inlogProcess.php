@@ -1,5 +1,5 @@
 <?php
-// waarden ophalen uit het formulier in het bestand index.php
+// username en wachtwoord ophalen uit het formulier in het bestand index.php
 $username = $_POST['user'];
 $password = $_POST['pass'];
 

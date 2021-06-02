@@ -1,8 +1,10 @@
 <?php
+//check for error codes
 $error=0;
 if(isset($_GET['error']))
     $error = $_GET['error'];
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
