@@ -1,26 +1,45 @@
 <?php
-// waarden ophalen uit het formulier in het bestand reserved.php
+// waarden ophalen uit het formulier in het bestand index.php
 $username = $_POST['user'];
 $password = $_POST['pass'];
+
+// controle op lege velden
+
+ if($username == "" && $password ==""){
+     header("Location: index.php?error=1");
+     die();
+ }elseif($username == "") {
+     header("Location: index.php?error=2");
+     die();
+ }elseif($password == ""){
+     header("Location: index.php?error=3");
+     die();
+ }
+
+
 $connect = mysqli_connect("localhost", "root", "");
-mysqli_select_db($connect,"reserveren");
-// om mysql-injectie te voorkomen
+mysqli_select_db($connect,"rocketduckgaming");
+// om sql injecties te voorkomen
+
 $username = stripslashes($username);
 $password = stripslashes($password);
-$username  = mysqli_real_escape_string( $connect,$username);
+$username  = mysqli_real_escape_string($connect,$username);
 $password = mysqli_real_escape_string($connect, $password);
 
-// maak verbinding met de server en selecteer database
 
 
-//query the database for user
-$result = mysqli_query($connect,"select * from user where username = '$username' and password = '$password'");
+
+//Database bevragen
+$result = mysqli_query($connect,"select * from users where userName = '$username' and userPassword = '$password'");
+
     $row = mysqli_fetch_array ($result);
-    if ($row['username'] == $username && $row['password'] == $password ){
-    echo "login successful!!! Welcome ".$row['username'];
-    } else {
-    echo "failed to login!";
+
+    if ($row['userName'] == $username && $row['userPassword'] == $password ){
+    echo "Welcome ".$row['userName'];
+    }elseif($row['userName'] != $username || $row['userPassword'] != $password){
+        header("location: index.php?error=4");
+        die();
     }
-    
-    ?>
-    
+    else {
+        echo "something went wrong, please try again";
+   }
