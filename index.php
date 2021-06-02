@@ -1,7 +1,10 @@
+<?php
+    include_once ("header.php")
+
+        ?>
+
 <html>
-<body>
-<h1>
-    Fakka
-</h1>
-</body>
+<head>
+    <title>Home</title>
+</head>
 </html>
