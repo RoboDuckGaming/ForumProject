@@ -8,22 +8,22 @@ if(isset($_GET['error']))
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Pagina</title>
+    <title>Login page</title>
     <link rel="stylesheet" type="text/css" href="#">
 </head>
 <body>
 <div id="frm">
     <form action="inlogProcess.php" method="post">
         <p>
-            <label>username:</label>
+            <label>Username:</label>
         <input type="text" id="user" name="user"/>
         </p>
         <p>
-        <label>password:</label>
+        <label>Password:</label>
         <input type="password" id="pass" name="pass"/>
         </p>
         <p>
-        <input type="submit" id="btn" value="Aanmelden" />
+        <input type="submit" id="btn" value="Sign in" />
         </p>
     </form>
 </div>

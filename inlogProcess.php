@@ -1,4 +1,8 @@
 <?php
+//connectie met database
+$connect = mysqli_connect("localhost", "root", "");
+mysqli_select_db($connect,"rocketduckgaming");
+
 // username en wachtwoord ophalen uit het formulier in het bestand index.php
 $username = $_POST['user'];
 $password = $_POST['pass'];
@@ -15,10 +19,6 @@ $password = $_POST['pass'];
      header("Location: index.php?error=3");
      die();
  }
-
-
-$connect = mysqli_connect("localhost", "root", "");
-mysqli_select_db($connect,"rocketduckgaming");
 // om sql injecties te voorkomen
 
 $username = stripslashes($username);
@@ -32,7 +32,7 @@ $password = mysqli_real_escape_string($connect, $password);
 //Database bevragen
 $result = mysqli_query($connect,"select * from users where userName = '$username' and userPassword = '$password'");
 
-    $row = mysqli_fetch_array ($result);
+$row = mysqli_fetch_array ($result);
 
     if ($row['userName'] == $username && $row['userPassword'] == $password ){
     echo "Welcome ".$row['userName'];
