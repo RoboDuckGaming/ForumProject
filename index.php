@@ -14,9 +14,9 @@ include_once ("header.php")
 <body>
 <!--Gta V card -->
 <div class="row">
-    <div class="col-sm-6">
-        <div class="card card text-white bg-danger mb-3" style="width: 18rem;">
-            <img src="img/gta.jpg" class="card-img-top" alt="card picture">
+    <div class="col-lg-3">
+        <div class="card text-black bg-secondary mb-3" style="width: 18rem;  border: 2px;">
+            <img style="height: 12rem; width: 18rem; align-items: center;" src="img/gta.jpg" class="card-img-top" alt="card picture" >
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -24,11 +24,40 @@ include_once ("header.php")
             </div>
         </div>
     </div>
-</div>
 <!--Rocket league card -->
-    <div class="col-sm-6">
-        <div class="card text-white bg-danger mb-3" style="width: 18rem;">
-            <img src="img/rocketLeague.jpg" class="card-img-top" alt="card picture">
+    <div class="col-lg-3">
+        <div class="card text-white bg-secondary mb-3" style="width: 18rem; border: 2px;">
+            <img style="height: 12rem; width: 18rem;" src="img/rocketLeague.jpg" class="card-img-top" alt="card picture">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Reviews</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card text-white bg-secondary mb-3" style="width: 18rem; border: 2px;">
+            <img style="height: 12rem; width: 18rem;" src="img/rocketLeague.jpg" class="card-img-top" alt="card picture">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Reviews</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card text-white bg-secondary mb-3" style="width: 18rem; border: 2px;">
+            <img style="height: 12rem; width: 18rem;" src="img/rocketLeague.jpg" class="card-img-top" alt="card picture">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Reviews</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card text-white bg-secondary mb-3" style="width: 18rem; border: 2px;">
+            <img style="height: 12rem; width: 18rem;" src="img/rocketLeague.jpg" class="card-img-top" alt="card picture">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
