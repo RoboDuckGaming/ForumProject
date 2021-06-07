@@ -25,9 +25,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Features</a>
                 </li>
+                <?php
+                if(!isset($_SESSION["username"]) && $_SESSION["status"]!="actief"){
+                ?>
                 <li class="nav-item">
                     <a class="nav-link" href="login.php">Log in</a>
                 </li>
+                <?php
+                }elseif((isset($_SESSION["username"]) && $_SESSION["status"]="actief")){
+                    echo '<li class="nav-item">';
+                    echo '<a class="nav-link" href="logOut.php">Log out</a>';
+                    echo '</li>';
+                }
+                ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown link

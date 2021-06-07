@@ -39,7 +39,7 @@ $row = mysqli_fetch_array ($result);
     if ($row['userName'] == $username && $row['userPassword'] == $password ){
         $_SESSION["status"] = "actief";
         $_SESSION["username"] = $username;
-    header("location: post.php");
+    header("location: index.php");
     }elseif($row['userName'] != $username || $row['userPassword'] != $password){
         header("location: login.php?error=4");
         die();

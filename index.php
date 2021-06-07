@@ -1,4 +1,5 @@
 <?php
+session_start();
 //add header
 include_once ("header.php")
 ?>
@@ -26,7 +27,7 @@ include_once ("header.php")
     </div>
 <!--Rocket league card -->
     <div class="col-lg-3">
-        <div class="card text-white bg-secondary mb-3" style="width: 18rem; border: 2px;">
+        <div class="card text-black bg-secondary mb-3" style="width: 18rem; border: 2px;">
             <img style="height: 12rem; width: 18rem;" src="img/rocketLeague.jpg" class="card-img-top" alt="card picture">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -35,8 +36,9 @@ include_once ("header.php")
             </div>
         </div>
     </div>
+    <!--7 Days To Die-->
     <div class="col-lg-3">
-        <div class="card text-white bg-secondary mb-3" style="width: 18rem; border: 2px;">
+        <div class="card text-black bg-secondary mb-3" style="width: 18rem; border: 2px;">
             <img style="height: 12rem; width: 18rem;" src="img/rocketLeague.jpg" class="card-img-top" alt="card picture">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -45,18 +47,9 @@ include_once ("header.php")
             </div>
         </div>
     </div>
+    <!--Fortnite-->
     <div class="col-lg-3">
-        <div class="card text-white bg-secondary mb-3" style="width: 18rem; border: 2px;">
-            <img style="height: 12rem; width: 18rem;" src="img/rocketLeague.jpg" class="card-img-top" alt="card picture">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Reviews</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div class="card text-white bg-secondary mb-3" style="width: 18rem; border: 2px;">
+        <div class="card text-black bg-secondary mb-3" style="width: 18rem; border: 2px;">
             <img style="height: 12rem; width: 18rem;" src="img/rocketLeague.jpg" class="card-img-top" alt="card picture">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
