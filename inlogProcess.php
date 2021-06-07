@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 //connectie met database
 $connect = mysqli_connect("localhost", "root", "");
 mysqli_select_db($connect,"rocketduckgaming");
@@ -35,7 +37,9 @@ $result = mysqli_query($connect,"select * from users where userName = '$username
 $row = mysqli_fetch_array ($result);
 
     if ($row['userName'] == $username && $row['userPassword'] == $password ){
-    echo "Welcome ".$row['userName'];
+        $_SESSION["status"] = "actief";
+        $_SESSION["username"] = $username;
+    header("location: post.php");
     }elseif($row['userName'] != $username || $row['userPassword'] != $password){
         header("location: login.php?error=4");
         die();
