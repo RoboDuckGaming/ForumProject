@@ -1,18 +1,18 @@
 <?php
 session_start();
-
-if(!isset($_SESSION["username"]) && $_SESSION["status"]!="actief"){
-    echo "<script>alert('uh oh')</script>";
-}
+include_once ("header.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Posts</title>
+    <title>Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
+<div class="row">
 <?php
 $connect = mysqli_connect("localhost", "root", "");
 mysqli_select_db($connect,"rocketduckgaming");
@@ -21,18 +21,32 @@ mysqli_select_db($connect,"rocketduckgaming");
 $sql = "SELECT * FROM games";
 $result = mysqli_query($connect, $sql);
 $resultCheck = mysqli_num_rows($result);
+$data = array();
 
 if ($resultCheck > 0){
     while($row = mysqli_fetch_assoc($result)){
-        $gameID = $row['gameID'];
-        echo "<strong>" . $row['gameTitle'] . "</strong>, ";
-        echo $row['gameDescription'] . "<br>" . "<button onclick=window.location='review.php?gameID=$gameID'>Review</button>";
-        echo "<hr> <br>";
+        $data[] = $row;
     }
-}else {
-    echo "Something went wrong";
+}
+
+foreach($data as $loopdata) {
+    $gameID = $loopdata['gameID'];
+    $gameTitle = $loopdata['gameTitle'];
+    $gameDescription = $loopdata['gameDescription'];
+    $img = $loopdata['gamePic'];
+    echo <<<MYTAG
+    <div class="col-lg-3">
+        <div class="card text-black bg-secondary mb-3" style="width: 18rem;  border: 2px;">
+            <img style="height: 12rem; width: 18rem; align-items: center;" src="$img" class="card-img-top" alt="card picture" >
+            <div class="card-body">
+                <h5 class="card-title">$gameTitle</h5>
+                <p class="card-text">$gameDescription</p>
+                <a href="review.php?gameID=$gameID" class="btn btn-primary">Reviews</a>
+            </div>
+        </div>
+    </div>
+MYTAG;
 }
 ?>
-<a href="logOut.php">Log out</a>
 </body>
 </html>
