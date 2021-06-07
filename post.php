@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["username"]) && $_SESSION["status"]!="actief"){
+    echo "<script>alert('uh oh')</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +33,6 @@ if ($resultCheck > 0){
     echo "Something went wrong";
 }
 ?>
-
+<a href="logOut.php">Log out</a>
 </body>
 </html>
