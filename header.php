@@ -26,6 +26,8 @@
                 </li>
                 <?php
                 if(!isset($_SESSION["username"]) && $_SESSION["status"]!="actief"){
+                    $_SESSION["username"] = null;
+                    $_SESSION["status"] = null;
                 ?>
                 <li class="nav-item">
                     <a class="nav-link" href="login.php">Log in</a>
