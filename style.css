@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    color:white;
 }
 .no-gutters {
     margin-right: 0;
@@ -24,4 +25,8 @@ body {
     background-color: darkred;
     color: white;
     border-color: darkred;
+}
+.form {
+    color:white;
+    background-color: darkred;
 }
