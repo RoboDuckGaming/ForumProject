@@ -31,33 +31,43 @@ $resultCheck = mysqli_num_rows($result);
         }
     }
 
+   echo <<<plain
+<table class="table table-dark table-secundary">
+    <thead>
+    <tr>
+        <th scope="col">User ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Review</th>
+    </tr>
+    </thead>
+    <tbody>
+plain;
+
+
     foreach($data as $loopdata){
         $gameReviewID = $gameID;
         $userReviewID = $loopdata['userReviewID'];
         $reviewTitle = $loopdata['reviewTitle'];
         $reviewText = $loopdata['reviewText'];
         $username = $loopdata=['userName'];
-        echo $reviewText;
-       // echo $username;
 
+       echo <<<invulling
+        <tr>
+        <th scope="row">$userReviewID</th>
+        <td>$reviewTitle</td>
+        <td>$reviewText</td>
+        </tr>
+        
+        invulling;
     }
-?>
-<table class="table table-dark table-secundary">
-    <thead>
-    <tr>
-        <th scope="col">User</th>
-        <th scope="col">Title</th>
-        <th scope="col">Review</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-    </tr>
-    </tbody>
+
+    echo <<<plain2
+</tbody>
 </table>
+plain2;
+
+
+?>
 
 </body>
 </html>
