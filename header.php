@@ -1,4 +1,6 @@
 <?php
+$_SESSION["username"] = null;
+$_SESSION["status"] = null;
 ?>
 <html lang="en">
 <head>
