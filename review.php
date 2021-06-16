@@ -4,6 +4,7 @@ session_start();
 if(!isset($_SESSION["username"]) && $_SESSION["status"]!="actief"){
     header("location: login.php");
 }
+include("header.php");
 ?>
 
 <!DOCTYPE html>
