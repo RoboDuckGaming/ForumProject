@@ -3,6 +3,7 @@ require_once('config.php');
 ?>
 <?php
 
+
 if(isset($_POST)){
 
 	$username 		= $_POST['username'];
