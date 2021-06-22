@@ -23,6 +23,8 @@ mysqli_select_db($connect,"rocketduckgaming");
 $gameID = $_GET['gameID'];
 $sql = "SELECT * FROM reviews WHERE reviewGameID = '$gameID';";
 
+$_SESSION['gameID'] = $gameID;
+
 $result = mysqli_query($connect, $sql);
 $resultCheck = mysqli_num_rows($result);
 
@@ -66,6 +68,15 @@ plain;
 </tbody>
 </table>
 plain2;
+
+    echo <<<form
+<form action="addReview.php" method="post">
+    <input type="text" name="reviewTitle" placeholder="Review title">
+    <br>
+    <input type="text" name="reviewText" placeholder="Review text"><br>
+    <button type="submit" name="submit">Post review!</button>
+</form>
+form;
 
 
 ?>
