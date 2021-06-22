@@ -40,6 +40,11 @@ require_once('config.php');
 		</div>
 	</form>
 </div>
+<div>
+    <form>
+        <input type="checkbox"><h9>ik ga akkoord met alle voorwaarden</h9>
+    </form>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script type="text/javascript">
@@ -84,7 +89,6 @@ require_once('config.php');
 				
 			}
 
-			
 
 
 
