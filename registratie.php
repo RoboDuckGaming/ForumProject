@@ -66,7 +66,7 @@ require_once('config.php');
 				$.ajax({
 					type: 'POST',
 					url: 'process.php',
-					data: {userName: username,email: email,wachtwoord: wachtwoord},
+					data: {username: username,email: email,wachtwoord: wachtwoord},
 					success: function(data){
 					Swal.fire({
 								'title': 'Successful',

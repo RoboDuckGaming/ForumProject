@@ -10,7 +10,7 @@ if(isset($_POST)){
 	$email 			= $_POST['email'];
 	$wachtwoord 		= sha1($_POST['wachtwoord']);
 
-		$sql = "INSERT INTO users (username, email, wachtwoord ) VALUES(?,?,?,?,?)";
+		$sql = "INSERT INTO users (userName, userEmail, userPassword ) VALUES(?,?,?)";
 		$stmtinsert = $db->prepare($sql);
 		$result = $stmtinsert->execute([$username, $email, $wachtwoord]);
 		if($result){
