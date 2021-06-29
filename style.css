@@ -30,3 +30,11 @@ body {
     color:white;
     background-color: darkred;
 }
+.dropdown-item{
+    background-color: black;
+    color:#989DA0;
+
+}
+.dropdown-menu.show{
+    background-color: black;
+}

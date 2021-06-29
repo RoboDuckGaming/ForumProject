@@ -19,16 +19,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
+
                 <?php
                 if(!isset($_SESSION["username"]) && $_SESSION["status"]!="actief"){
                     $_SESSION["username"] = null;
                     $_SESSION["status"] = null;
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Log in</a>
+                    <a class="nav-link .ms-auto" href="login.php">Log in</a>
                 </li>
                 <?php
                 }elseif((isset($_SESSION["username"]) && $_SESSION["status"]="actief")){
@@ -37,16 +35,6 @@
                     echo '</li>';
                 }
                 ?>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown link
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </div>
