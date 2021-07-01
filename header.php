@@ -39,5 +39,9 @@
         </div>
     </div>
 </nav>
+<div class="footer">
+    <p>2021</p>
+</div>
+
 </body>
 </html>
